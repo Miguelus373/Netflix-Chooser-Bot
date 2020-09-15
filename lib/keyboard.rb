@@ -21,17 +21,11 @@ class Keyboard
 end
 
 class InlineKeyboard < Keyboard
-
   def buttons
-    reply = []
-    (0...button.length).each do |i|
-      reply.push(Telegram::Bot::Types::InlineKeyboardButton.new(text: button[i]), url: button[i+1])
-      i+=1
-    end
-    reply
+    Telegram::Bot::Types::InlineKeyboardButton.new(text: button[0], url: button[1])
   end
 
   def markup
-    Telegram::Bot::Types::InlineKeyboardMarkup.new(keyboard: buttons)
-  end  
+    Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: buttons)
+  end
 end

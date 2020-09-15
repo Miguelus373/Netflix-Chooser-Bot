@@ -1,8 +1,7 @@
 class Catalog
-
-  @@movies = {action: [], comedy: [], drama: [], romance: [], horror: []}
-  @@series = {action: [], comedy: [], drama: [], romance: [], horror: []}
-  @@type = {movies: @@movies, series: @@series}
+  @@movies = { action: [], comedy: [], drama: [], romance: [], horror: [] }
+  @@series = { action: [], comedy: [], drama: [], romance: [], horror: [] }
+  @@type = { movies: @@movies, series: @@series }
 
   attr_reader :type
   attr_reader :genre
