@@ -1,10 +1,8 @@
-require_relative 'chooser.rb'
-
 class Catalog
 
-  @@movie = {action: [], comedy: [], drama: [], romance: [], horror: []}
-  @@serie = {action: [], comedy: [], drama: [], romance: [], horror: []}
-  @@type = {movie: @@movie, serie: @@serie}
+  @@movies = {action: [], comedy: [], drama: [], romance: [], horror: []}
+  @@series = {action: [], comedy: [], drama: [], romance: [], horror: []}
+  @@type = {movies: @@movies, series: @@series}
 
   attr_reader :type
   attr_reader :genre

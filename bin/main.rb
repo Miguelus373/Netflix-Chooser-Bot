@@ -1,4 +1,5 @@
 require 'telegram/bot'
+require_relative '../lib/listings.rb'
 
 token = '1344544400:AAEAmz4FxJ7Rgk7L0zgxVxcENwydlK6CkXI'
 type = nil
@@ -32,9 +33,15 @@ Telegram::Bot::Client.run(token) do |bot|
       
       bot.api.send_message(chat_id: message.chat.id, text:  "Ok, let me get #{message.text} #{type} for you")
       genre = message.text
-      
+
+      if (!type.nil? && !genre.nil?)
+        recomended = Chooser.recomendation(type, genre)
+        title = recomended.keys[0]
+        url = recomended.values[0]
+      end
+
       kb_recomendation = [
-        Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Title', url: 'netflix.com')
+        Telegram::Bot::Types::InlineKeyboardButton.new(text: title, url: url)
       ]
       markup_recomendation = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb_recomendation)
       bot.api.send_message(chat_id: message.chat.id, text: 'Take a look at this', reply_markup: markup_recomendation)
