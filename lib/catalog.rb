@@ -1,3 +1,4 @@
+# rubocop:disable Style/ClassVars
 class Catalog
   @@movies = { action: [], comedy: [], drama: [], romance: [], horror: [] }
   @@series = { action: [], comedy: [], drama: [], romance: [], horror: [] }
@@ -24,3 +25,4 @@ class Catalog
     @@type
   end
 end
+# rubocop:enable Style/ClassVars
