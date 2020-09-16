@@ -3,7 +3,7 @@ require 'telegram/bot'
 require_relative '../lib/listings.rb'
 require_relative '../lib/keyboard.rb'
 
-token = '1344544400:AAEAmz4FxJ7Rgk7L0zgxVxcENwydlK6CkXI'
+token = '1378638620:AAGZMZmjr7GiM12MZ-NMrYW66IbUQfZ1bjs'
 type = nil
 genre = nil
 type_kb = Keyboard.new('Movies', 'Series')
