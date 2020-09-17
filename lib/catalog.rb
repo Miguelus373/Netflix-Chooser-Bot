@@ -4,10 +4,7 @@ class Catalog
   @@series = { action: [], comedy: [], drama: [], romance: [], horror: [] }
   @@type = { movies: @@movies, series: @@series }
 
-  attr_reader :type
-  attr_reader :genre
-  attr_reader :title
-  attr_reader :url
+  attr_reader :type, :genre, :title, :url
 
   def initialize(type, genre, title, url)
     @type = type

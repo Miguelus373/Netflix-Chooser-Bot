@@ -1,5 +1,3 @@
-require 'telegram/bot'
-
 class Keyboard
   attr_reader :button
 
@@ -17,15 +15,5 @@ class Keyboard
 
   def markup
     Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: buttons)
-  end
-end
-
-class InlineKeyboard < Keyboard
-  def buttons
-    Telegram::Bot::Types::InlineKeyboardButton.new(text: button[0], url: button[1])
-  end
-
-  def markup
-    Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: buttons)
   end
 end
