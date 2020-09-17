@@ -18,27 +18,44 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
+- Web Browser or Telegram app
 - Code Editor
-- Web Browser
+- Terminal
 
 ### Install
 
-Open a terminal an clone this repo using the following comand:
+The first step to run this bot on your pc is to clone this repo using the following command on your terminal:
 
 - `$git clone https://github.com/Miguelus373/Netflix-Chooser-Bot.git`
 
+After that, you need to install all the neccesary gems for this bot:
+
+- On your terminal, navigate to the folder where the repo is
+- Run `bundle install`
+
 ### Usage
 
-Once you have the repo locally you need to start the bot:
+Once you have the repo and its gems locally you need to start the bot.
 
-- Using the terminal go to the folder where the repo is
+- On your terminal, navigate to the folder where the repo is
 - Run `ruby bin/main.rb`
 
-### Telegram
+## Testing
+
+In case you want to test the different methods and classes of this project you just need to open a terminal on the repo folder and run `rspec`. This will display all the default tests for this repo.
+
+> If you want to add your own tests, go to the spec folder and find the class you want to add tests for
+
+## Telegram
 
 After the previous steps the bot is ready to be used.
 
 > Just go to the [Telegram](https://web.telegram.org/) webpage or use the app, then search for [@NetflixSelectorBot](https://web.telegram.org/#/im?p=@NetflixSelectorBot)
+
+### Bot Commands:
+
+- To start the bot just type `/start` and press send. The bot will ask you a couple of question to give you the best movie/serie recomendation
+- Once the bot has helped you to select something to watch, you can stop the bot by typing `/stop`
 
 ## Author
 
